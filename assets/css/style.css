@@ -54,6 +54,11 @@ nav a:hover {
     color: #1ee;
 }
 
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+}
+
 main {
     max-width: 900px;
     margin: 2rem auto;
