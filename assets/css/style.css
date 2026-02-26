@@ -119,3 +119,8 @@ footer p {
         padding: 0 0.5rem;
     }
 }
+
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+}
