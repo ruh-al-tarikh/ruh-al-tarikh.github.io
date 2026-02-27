@@ -102,6 +102,25 @@ footer p {
     transform: translate(-50%, 0);
 }
 
+/* Accessibility and Link Interactions */
+a:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+main a {
+    color: #0af;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+main a:hover, main a:focus-visible {
+    color: #1ee;
+    text-decoration-color: #1ee;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     header h1 {
