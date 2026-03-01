@@ -1,3 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background-color: #1ee;
+    color: #000;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -130,8 +145,8 @@ main a:hover, main a:focus-visible {
         flex-direction: column;
     }
     nav a {
-        display: block;
-        padding: 0.3rem 0;
+        display: inline-block;
+        padding: 0.6rem 1rem;
     }
     main {
         margin: 1rem;
