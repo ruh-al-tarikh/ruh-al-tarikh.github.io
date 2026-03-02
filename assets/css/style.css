@@ -131,7 +131,7 @@ main a:hover, main a:focus-visible {
     }
     nav a {
         display: block;
-        padding: 0.3rem 0;
+        padding: 0.6rem 1rem;
     }
     main {
         margin: 1rem;
