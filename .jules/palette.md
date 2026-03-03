@@ -9,3 +9,7 @@
 ## 2026-05-20 - [Mobile Navigation Touch Targets]
 **Learning:** For vertical mobile navigation, using `display: block` on anchor tags is superior to `display: inline-block` because it ensures the entire width of the navigation container is clickable. While `inline-block` might look better for centered text with underlines/borders, it significantly reduces the hit area (WCAG 2.5.5), leading to a poorer user experience.
 **Action:** Prioritize `display: block` with generous padding (e.g., `0.6rem 1rem`) for mobile navigation links to maximize accessibility and ease of use.
+
+## 2026-05-21 - [Brand-Aligned Selection and Smooth Motion]
+**Learning:** Micro-interactions like a custom `::selection` color that matches the brand identity (e.g., using #1ee Cyan) provide a subtle touch of delight that makes the site feel more cohesive. Additionally, implementing `scroll-behavior: smooth` (while respecting `prefers-reduced-motion`) significantly improves the perceived quality of navigation, especially when jumping to internal anchors like the "Skip to main content" link.
+**Action:** Always wrap `scroll-behavior: smooth` in a `prefers-reduced-motion: no-preference` media query and use brand-aligned colors for selection styles to enhance site personality.
