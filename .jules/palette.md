@@ -6,14 +6,6 @@
 **Learning:** Maintaining consistent structural patterns (like wrapping content in `<section>` and standardizing footer text) across all pages creates a more professional and predictable user experience. Implementing `:focus-visible` styles ensures that accessibility improvements are only visible to keyboard users, keeping the UI clean for mouse users while supporting those who need it.
 **Action:** Standardize common components (footer, header) and use `:focus-visible` for high-contrast focus indicators site-wide.
 
-## 2026-05-20 - [Mobile Navigation Touch Targets]
-**Learning:** For vertical mobile navigation, using `display: block` on anchor tags is superior to `display: inline-block` because it ensures the entire width of the navigation container is clickable. While `inline-block` might look better for centered text with underlines/borders, it significantly reduces the hit area (WCAG 2.5.5), leading to a poorer user experience.
-**Action:** Prioritize `display: block` with generous padding (e.g., `0.6rem 1rem`) for mobile navigation links to maximize accessibility and ease of use.
-
-## 2026-05-21 - [Brand-Aligned Selection and Smooth Motion]
-**Learning:** Micro-interactions like a custom `::selection` color that matches the brand identity (e.g., using #1ee Cyan) provide a subtle touch of delight that makes the site feel more cohesive. Additionally, implementing `scroll-behavior: smooth` (while respecting `prefers-reduced-motion`) significantly improves the perceived quality of navigation, especially when jumping to internal anchors like the "Skip to main content" link.
-**Action:** Always wrap `scroll-behavior: smooth` in a `prefers-reduced-motion: no-preference` media query and use brand-aligned colors for selection styles to enhance site personality.
-
-## 2026-05-22 - [Standardized Accessibility and Metadata Polish]
-**Learning:** Small polishes like adding `aria-label` to navigation landmarks, consistent page titles, and setting a `theme-color` meta tag for mobile browsers collectively elevate the site's perceived quality and accessibility. Improving color contrast for secondary text (like the footer) from #888 to #aaa ensures WCAG AA compliance and better readability on dark backgrounds.
-**Action:** Include a "polish pass" for every feature, ensuring landmark labels are present, metadata is optimized for mobile, and color contrast meets accessibility standards.
+## 2026-05-20 - [Mobile Navigation & Asset Path Fixes]
+**Learning:** Using `display: block` for navigation links in a vertical (mobile) layout causes the `aria-current="page"` indicator (bottom border) to span the full width, which can be visually confusing. Switching to `display: inline-block` ensures the indicator remains proportional to the text. Additionally, using absolute paths for assets (like `/assets/css/style.css`) in subpages breaks when the site is not served from the root domain; relative paths (e.g., `../assets/css/style.css`) are more robust.
+**Action:** Use `display: inline-block` for vertical navigation links to keep indicators appropriately sized, and always use relative paths for internal assets to ensure cross-environment compatibility.
