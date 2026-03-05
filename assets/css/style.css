@@ -34,6 +34,25 @@ header h1 {
     color: #0af;
 }
 
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    background: #0af;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
 nav {
     margin-top: 0.5rem;
 }
@@ -48,13 +67,12 @@ nav ul {
 }
 
 nav li {
-    margin: 0;
+    margin: 0.2rem 0.8rem;
 }
 
 nav a {
     color: #0af;
     text-decoration: none;
-    padding: 0.5rem 0.8rem;
     font-weight: bold;
     transition: color 0.3s;
     display: inline-block;
@@ -65,8 +83,9 @@ nav a[aria-current="page"] {
     border-bottom: 2px solid #1ee;
 }
 
-nav a:hover {
+nav a:hover, nav a[aria-current="page"] {
     color: #1ee;
+    text-decoration: underline;
 }
 
 :focus-visible {
@@ -147,11 +166,7 @@ footer p {
         flex-direction: column;
     }
     nav li {
-        text-align: center;
-    }
-    nav a {
-        display: inline-block;
-        padding: 0.6rem 1rem;
+        margin: 0.3rem 0;
     }
     main {
         margin: 1rem;
