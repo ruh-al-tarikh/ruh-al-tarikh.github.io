@@ -144,6 +144,9 @@ main a:hover, main a:focus-visible {
     nav ul {
         flex-direction: column;
     }
+    nav li {
+        text-align: center;
+    }
     nav a {
         display: inline-block;
         padding: 0.6rem 1rem;
