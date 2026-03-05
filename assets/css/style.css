@@ -1,3 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background-color: #1ee;
+    color: #000;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -54,6 +69,11 @@ nav a:hover {
     color: #1ee;
 }
 
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+}
+
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -79,7 +99,12 @@ h2 {
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #888;
+    color: #aaa;
+}
+
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
 }
 
 /* Skip link */
@@ -116,12 +141,20 @@ footer p {
     nav ul {
         flex-direction: column;
     }
+    nav li {
+        text-align: center;
+    }
     nav a {
-        display: block;
-        padding: 0.3rem 0;
+        display: inline-block;
+        padding: 0.6rem 1rem;
     }
     main {
         margin: 1rem;
         padding: 0 0.5rem;
     }
+}
+
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
 }
