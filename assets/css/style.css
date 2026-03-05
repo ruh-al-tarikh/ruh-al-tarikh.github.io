@@ -127,7 +127,7 @@ footer p {
     transform: translate(-50%, 0);
 }
 
-/* Focus visible styles for keyboard navigation */
+/* Focus indicator for keyboard navigation */
 :focus-visible {
     outline: 2px solid #1ee;
     outline-offset: 2px;
