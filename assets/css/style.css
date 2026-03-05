@@ -1,6 +1,10 @@
-@media (prefers-reduced-motion: no-preference) {
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
 }
 
@@ -141,7 +145,7 @@ main a:hover, main a:focus-visible {
         flex-direction: column;
     }
     nav a {
-        display: block;
+        display: inline-block;
         padding: 0.6rem 1rem;
     }
     main {
