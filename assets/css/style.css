@@ -1,3 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background-color: #1ee;
+    color: #000;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -84,7 +99,7 @@ h2 {
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #888;
+    color: #aaa;
 }
 
 /* Skip link */
@@ -107,6 +122,25 @@ footer p {
     transform: translate(-50%, 0);
 }
 
+/* Accessibility and Link Interactions */
+a:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+main a {
+    color: #0af;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+main a:hover, main a:focus-visible {
+    color: #1ee;
+    text-decoration-color: #1ee;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     header h1 {
@@ -115,9 +149,12 @@ footer p {
     nav ul {
         flex-direction: column;
     }
+    nav li {
+        text-align: center;
+    }
     nav a {
-        display: block;
-        padding: 0.3rem 0;
+        display: inline-block;
+        padding: 0.6rem 1rem;
     }
     main {
         margin: 1rem;
