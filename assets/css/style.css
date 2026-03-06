@@ -34,23 +34,30 @@ header h1 {
     color: #0af;
 }
 
+/* Accessibility: Skip to main content link */
 .skip-link {
     position: absolute;
     top: 0;
-    left: 1rem;
-    background: #0af;
-    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: #1ee; /* High-contrast cyan background */
+    color: #000; /* High-contrast black text */
     padding: 0.5rem 1rem;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
     z-index: 1000;
+    transition: transform 0.3s;
     text-decoration: none;
     font-weight: bold;
     border-radius: 0 0 5px 5px;
 }
 
 .skip-link:focus {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
+}
+
+/* Standardized focus indicator for keyboard navigation */
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
 }
 
 nav {
@@ -88,11 +95,6 @@ nav a:hover, nav a[aria-current="page"] {
     text-decoration: underline;
 }
 
-:focus-visible {
-    outline: 2px solid #1ee;
-    outline-offset: 2px;
-}
-
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -121,43 +123,7 @@ footer p {
     color: #aaa;
 }
 
-:focus-visible {
-    outline: 2px solid #1ee;
-    outline-offset: 2px;
-}
-
-:focus-visible {
-    outline: 2px solid #1ee;
-    outline-offset: 2px;
-}
-
-/* Skip link */
-.skip-link {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    background: #0af;
-    color: #000;
-    padding: 0.5rem 1rem;
-    z-index: 1000;
-    transition: transform 0.3s;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0 0 5px 5px;
-}
-
-.skip-link:focus {
-    transform: translate(-50%, 0);
-}
-
-/* Focus indicator for keyboard navigation */
-:focus-visible {
-    outline: 2px solid #1ee;
-    outline-offset: 2px;
-}
-
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.5rem;
@@ -168,13 +134,15 @@ footer p {
     nav li {
         margin: 0.3rem 0;
     }
+    /* UX: Enhanced mobile touch targets (WCAG 2.5.5) */
+    nav a {
+        display: block;
+        padding: 0.6rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
     main {
         margin: 1rem;
         padding: 0 0.5rem;
     }
-}
-
-:focus-visible {
-    outline: 2px solid #1ee;
-    outline-offset: 2px;
 }
