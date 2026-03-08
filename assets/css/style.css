@@ -54,6 +54,17 @@ header h1 {
     transform: translate(-50%, 0);
 }
 
+a {
+    color: #0af;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+    color: #1ee;
+    text-decoration: underline;
+}
+
 nav {
     margin-top: 0.5rem;
 }
@@ -72,21 +83,13 @@ nav li {
 }
 
 nav a {
-    color: #0af;
-    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
     display: inline-block;
 }
 
 nav a[aria-current="page"] {
     color: #1ee;
     border-bottom: 2px solid #1ee;
-}
-
-nav a:hover, nav a[aria-current="page"] {
-    color: #1ee;
-    text-decoration: underline;
 }
 
 /* Focus indicator for keyboard navigation */
