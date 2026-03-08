@@ -13,3 +13,7 @@
 ## 2026-05-22 - [Global Link Accessibility]
 **Learning:** Default browser blue links (#0000ee) often fail WCAG contrast on dark backgrounds. Using brand-aligned colors (like #0af) for global link styles ensures consistency and readability across all content, not just navigation. Transition effects (e.g., color shift to #1ee) provide essential interactive feedback.
 **Action:** Define global link styles with appropriate contrast ratios and hover transitions to ensure accessibility and a cohesive user experience.
+
+## 2026-05-24 - [Micro-UX Accessibility and Interaction]
+**Learning:** Improving accessibility often involves visual cues beyond just color. Underlining links in prose (WCAG 1.4.1) and ensuring consistent heading hierarchies across the site significantly enhances the user experience for everyone. Adding subtle hover transitions (like a small lift) provides immediate, delightful feedback that makes the interface feel more responsive.
+**Action:** Ensure links in body text are underlined by default and use subtle CSS transforms for interactive feedback on navigation elements.
