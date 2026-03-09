@@ -65,6 +65,11 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Ensure links in content area are underlined for accessibility (WCAG 1.4.1) */
+main section a {
+    text-decoration: underline;
+}
+
 nav {
     margin-top: 0.5rem;
 }

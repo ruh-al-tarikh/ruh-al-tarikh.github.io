@@ -13,3 +13,7 @@
 ## 2026-05-22 - [Global Link Accessibility]
 **Learning:** Default browser blue links (#0000ee) often fail WCAG contrast on dark backgrounds. Using brand-aligned colors (like #0af) for global link styles ensures consistency and readability across all content, not just navigation. Transition effects (e.g., color shift to #1ee) provide essential interactive feedback.
 **Action:** Define global link styles with appropriate contrast ratios and hover transitions to ensure accessibility and a cohesive user experience.
+
+## 2026-03-09 - [Link Accessibility in Dark Mode]
+**Learning:** Relying purely on color (#0af vs #1ee) to identify links in a dark-themed UI can be difficult for users with low vision or color blindness. Defaulting to underlines for content-area links significantly improves discoverability and compliance with WCAG 1.4.1.
+**Action:** Always underline links within the primary content area ('main section') to ensure they are accessible via more than just color.
