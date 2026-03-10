@@ -57,7 +57,11 @@ header h1 {
 a {
     color: #0af;
     text-decoration: none;
-    transition: color 0.3s, text-decoration 0.3s;
+    transition: color 0.3s, text-decoration 0.3s, transform 0.2s ease-in-out;
+}
+
+main section p a {
+    text-decoration: underline;
 }
 
 a:hover {
@@ -90,6 +94,10 @@ nav li {
 nav a {
     font-weight: bold;
     display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-1px);
 }
 
 nav a[aria-current="page"] {
