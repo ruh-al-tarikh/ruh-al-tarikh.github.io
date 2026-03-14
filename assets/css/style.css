@@ -57,6 +57,7 @@ header h1 {
 a {
     color: #0af;
     text-decoration: none;
+    text-underline-offset: 4px;
     transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -115,6 +116,10 @@ nav a[aria-current="page"] {
     outline-offset: 2px;
 }
 
+main:focus {
+    outline: none;
+}
+
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -159,6 +164,25 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
     color: #aaa;
+}
+
+/* Custom branded scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border: 3px solid #1a1a1a;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0af;
 }
 
 /* Responsive */

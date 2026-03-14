@@ -25,3 +25,7 @@
 ## 2026-05-25 - [Section Entrance Animations & Path Portability]
 **Learning:** Adding subtle entrance animations (e.g., a 0.6s fade-in) can make a static site feel more dynamic and modern. However, these must always respect `prefers-reduced-motion` to remain accessible. Additionally, for GitHub Pages projects, using relative paths for assets (like `../assets/css/style.css`) is more robust than absolute paths (`/assets/css/style.css`), especially when the site is hosted on a sub-path.
 **Action:** Use relative paths for cross-page asset linking and always wrap animations in `prefers-reduced-motion` media queries.
+
+## 2026-06-12 - [Focus Management & Custom Scrollbars]
+**Learning:** Adding `tabindex="-1"` to the `<main>` element is essential for making "Skip to Content" links work reliably across all browsers and screen readers. Combining this with `main:focus { outline: none; }` allows the focus to move correctly without creating an accidental visual border around the entire page content. Additionally, custom branded scrollbars (using `::-webkit-scrollbar`) provide a final layer of "UI polish" that makes dark-themed sites feel cohesive and intentional.
+**Action:** Always pair skip-links with `tabindex="-1"` on the target and implement themed scrollbars to maintain brand consistency in dark mode.
