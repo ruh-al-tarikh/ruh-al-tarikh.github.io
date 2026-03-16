@@ -1,5 +1,9 @@
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    /* Standard properties for cross-browser support */
+    scrollbar-width: thin;
+    scrollbar-color: #777 #1a1a1a;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -176,7 +180,7 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #777; /* Palette: Increased contrast for better accessibility */
     border: 3px solid #1a1a1a;
     border-radius: 6px;
 }

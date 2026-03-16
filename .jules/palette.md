@@ -29,3 +29,7 @@
 ## 2026-06-12 - [Focus Management & Custom Scrollbars]
 **Learning:** Adding `tabindex="-1"` to the `<main>` element is essential for making "Skip to Content" links work reliably across all browsers and screen readers. Combining this with `main:focus { outline: none; }` allows the focus to move correctly without creating an accidental visual border around the entire page content. Additionally, custom branded scrollbars (using `::-webkit-scrollbar`) provide a final layer of "UI polish" that makes dark-themed sites feel cohesive and intentional.
 **Action:** Always pair skip-links with `tabindex="-1"` on the target and implement themed scrollbars to maintain brand consistency in dark mode.
+
+## 2026-06-15 - [Accessible & Stable Scrollbars]
+**Learning:** Standard scrollbars often have poor contrast on dark themes, and their appearance can cause "layout jumps." Using `scrollbar-gutter: stable` prevents these shifts, while standard CSS properties like `scrollbar-width` and `scrollbar-color` ensure a consistent, accessible experience across all modern browsers.
+**Action:** Always include `scrollbar-gutter: stable` on the `html` element and use high-contrast thumb colors (e.g., #777 on dark backgrounds) for better accessibility.
