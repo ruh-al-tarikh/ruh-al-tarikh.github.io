@@ -32,10 +32,21 @@ header, footer {
     text-align: center;
 }
 
-header h1 {
+.site-title {
     margin: 0;
     font-size: 2rem;
+    font-weight: bold;
     color: #0af;
+}
+
+.site-title a {
+    color: #0af;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    color: #1ee;
+    text-decoration: none;
 }
 
 /* Skip link - hidden until focused */
@@ -140,6 +151,12 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     animation: fadeIn 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
 @keyframes fadeIn {
@@ -159,9 +176,13 @@ section {
     }
 }
 
-h2 {
+h2, main h1 {
     color: #0af;
     margin-top: 0;
+}
+
+main h1 {
+    font-size: 1.8rem;
 }
 
 footer p {
@@ -191,7 +212,7 @@ footer p {
 
 /* Responsive */
 @media (max-width: 600px) {
-    header h1 {
+    .site-title {
         font-size: 1.5rem;
     }
     nav ul {
