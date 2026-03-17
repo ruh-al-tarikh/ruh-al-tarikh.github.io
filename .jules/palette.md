@@ -37,3 +37,7 @@
 ## 2026-06-20 - [Semantic Hierarchy & Brand Consistency]
 **Learning:** Using a single `<h1>` per page for the primary content title and converting the site brand in the header to a `<p class="site-title">` with a link to the homepage creates a clear, logical document hierarchy for screen readers and search engines while maintaining a consistent visual identity. Adding `aria-labelledby` to sections further enhances landmark navigation.
 **Action:** Promote primary content headings to `<h1>`, use named landmarks for sections, and ensure the site header brand is a home link with consistent styling across all pages.
+
+## 2026-06-25 - [Modern Typography & Synchronized Interactions]
+**Learning:** Modern CSS properties like `text-wrap: balance` (for headings) and `text-wrap: pretty` (for body text) provide high-impact typographic polish with minimal effort. Additionally, using `:focus-within` on containers (like `<section>`) ensures keyboard users receive the same interactive "delight" (like lift effects) as mouse users.
+**Action:** Default to modern text-wrap properties for improved readability and use `:focus-within` to unify the experience between mouse and keyboard users.

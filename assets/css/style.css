@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
     scrollbar-gutter: stable;
     /* Standard properties for cross-browser support */
     scrollbar-width: thin;
@@ -24,6 +25,7 @@ body {
     background-color: #0f0f0f;
     color: #f0f0f0;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 header, footer {
@@ -37,16 +39,23 @@ header, footer {
     font-size: 2rem;
     font-weight: bold;
     color: #0af;
+    text-wrap: balance;
 }
 
 .site-title a {
     color: #0af;
     text-decoration: none;
+    display: inline-block;
 }
 
 .site-title a:hover {
     color: #1ee;
     text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.site-title a:active {
+    transform: translateY(0);
 }
 
 /* Skip link - hidden until focused */
@@ -154,7 +163,8 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:hover {
+section:hover,
+section:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
@@ -179,6 +189,11 @@ section:hover {
 h2, main h1 {
     color: #0af;
     margin-top: 0;
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
 }
 
 main h1 {
