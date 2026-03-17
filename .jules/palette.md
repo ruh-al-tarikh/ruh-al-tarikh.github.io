@@ -33,3 +33,7 @@
 ## 2026-06-15 - [Accessible & Stable Scrollbars]
 **Learning:** Standard scrollbars often have poor contrast on dark themes, and their appearance can cause "layout jumps." Using `scrollbar-gutter: stable` prevents these shifts, while standard CSS properties like `scrollbar-width` and `scrollbar-color` ensure a consistent, accessible experience across all modern browsers.
 **Action:** Always include `scrollbar-gutter: stable` on the `html` element and use high-contrast thumb colors (e.g., #777 on dark backgrounds) for better accessibility.
+
+## 2026-06-20 - [Semantic Hierarchy & Brand Consistency]
+**Learning:** Using a single `<h1>` per page for the primary content title and converting the site brand in the header to a `<p class="site-title">` with a link to the homepage creates a clear, logical document hierarchy for screen readers and search engines while maintaining a consistent visual identity. Adding `aria-labelledby` to sections further enhances landmark navigation.
+**Action:** Promote primary content headings to `<h1>`, use named landmarks for sections, and ensure the site header brand is a home link with consistent styling across all pages.
