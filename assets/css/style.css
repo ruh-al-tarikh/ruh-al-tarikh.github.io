@@ -234,11 +234,14 @@ footer p {
         flex-direction: column;
     }
     nav li {
-        margin: 0.3rem 0;
+        border-bottom: 1px solid #333;
+    }
+    nav li:last-child {
+        border-bottom: none;
     }
     nav a {
         display: block;
-        padding: 0.6rem 1rem;
+        padding: 0.8rem 1rem;
     }
     main {
         margin: 1rem;
