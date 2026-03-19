@@ -1,3 +1,42 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    scrollbar-gutter: stable;
+    /* Standard properties for cross-browser support */
+    scrollbar-width: thin;
+    scrollbar-color: #777 #1a1a1a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background-color: #1ee;
+    color: #000;
+}
+
+/* Branded scrollbar for modern browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+    border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0af;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -5,6 +44,7 @@ body {
     background-color: #0f0f0f;
     color: #f0f0f0;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 header, footer {
@@ -13,10 +53,69 @@ header, footer {
     text-align: center;
 }
 
-header h1 {
+.site-title {
     margin: 0;
     font-size: 2rem;
+    font-weight: bold;
     color: #0af;
+    text-wrap: balance;
+}
+
+.site-title a {
+    color: #0af;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.site-title a:hover {
+    color: #1ee;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.site-title a:active {
+    transform: translateY(0);
+}
+
+/* Skip link - hidden until focused */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: #0af;
+    color: #000;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+}
+
+.skip-link:focus {
+    transform: translate(-50%, 0);
+}
+
+a {
+    color: #0af;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #1ee;
+    text-decoration: underline;
+}
+
+a:active {
+    opacity: 0.7;
+}
+
+/* Ensure links in content area are underlined for accessibility (WCAG 1.4.1) */
+main section a {
+    text-decoration: underline;
 }
 
 /* Accessibility: Skip link */
@@ -51,6 +150,19 @@ nav li {
     margin: 0 0.8rem;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0.2rem 0.8rem;
+}
+
 nav a {
     color: #0af;
     text-decoration: none;
@@ -61,7 +173,31 @@ nav a {
 }
 
 nav a:hover, nav a[aria-current="page"] {
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+nav a[aria-current="page"] {
     color: #1ee;
+    border-bottom: 2px solid #1ee;
+}
+
+/* Focus indicator for keyboard navigation */
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
+}
+
+main:focus {
+    outline: none;
 }
 
 nav a[aria-current="page"] {
@@ -89,22 +225,77 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    /* Palette: Subtle entrance animation */
+    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
+section:hover,
+section:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section {
+        animation: none;
+    }
+}
+
+h2, main h1 {
     color: #0af;
     margin-top: 0;
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+main h1 {
+    font-size: 1.8rem;
 }
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #888;
+    color: #aaa;
+}
+
+/* Custom branded scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777; /* Palette: Increased contrast for better accessibility */
+    border: 3px solid #1a1a1a;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0af;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    header h1 {
+    .site-title {
         font-size: 1.5rem;
     }
     nav ul {
@@ -113,6 +304,16 @@ footer p {
     }
     nav li {
         margin: 0.3rem 0;
+    }
+    nav li {
+        border-bottom: 1px solid #333;
+    }
+    nav li:last-child {
+        border-bottom: none;
+    }
+    nav a {
+        display: block;
+        padding: 0.8rem 1rem;
     }
     main {
         margin: 1rem;
