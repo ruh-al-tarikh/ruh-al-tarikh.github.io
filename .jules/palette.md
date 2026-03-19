@@ -25,3 +25,22 @@
 ## 2026-05-26 - [Subtle Entrance Animations & Branded Scrollbars]
 **Learning:** Subtle entrance animations (fade-in + slight slide) provide a polished, premium feel for content loading. Branded scrollbars further unify the UI design language. Both must be implemented carefully: animations should respect `prefers-reduced-motion`, and scrollbars should maintain enough contrast to remain functional.
 **Action:** Use `animation` with a `prefers-reduced-motion: reduce` fallback and `::-webkit-scrollbar` for cohesive branding on webkit browsers.
+## 2026-05-25 - [Section Entrance Animations & Path Portability]
+**Learning:** Adding subtle entrance animations (e.g., a 0.6s fade-in) can make a static site feel more dynamic and modern. However, these must always respect `prefers-reduced-motion` to remain accessible. Additionally, for GitHub Pages projects, using relative paths for assets (like `../assets/css/style.css`) is more robust than absolute paths (`/assets/css/style.css`), especially when the site is hosted on a sub-path.
+**Action:** Use relative paths for cross-page asset linking and always wrap animations in `prefers-reduced-motion` media queries.
+
+## 2026-06-12 - [Focus Management & Custom Scrollbars]
+**Learning:** Adding `tabindex="-1"` to the `<main>` element is essential for making "Skip to Content" links work reliably across all browsers and screen readers. Combining this with `main:focus { outline: none; }` allows the focus to move correctly without creating an accidental visual border around the entire page content. Additionally, custom branded scrollbars (using `::-webkit-scrollbar`) provide a final layer of "UI polish" that makes dark-themed sites feel cohesive and intentional.
+**Action:** Always pair skip-links with `tabindex="-1"` on the target and implement themed scrollbars to maintain brand consistency in dark mode.
+
+## 2026-06-15 - [Accessible & Stable Scrollbars]
+**Learning:** Standard scrollbars often have poor contrast on dark themes, and their appearance can cause "layout jumps." Using `scrollbar-gutter: stable` prevents these shifts, while standard CSS properties like `scrollbar-width` and `scrollbar-color` ensure a consistent, accessible experience across all modern browsers.
+**Action:** Always include `scrollbar-gutter: stable` on the `html` element and use high-contrast thumb colors (e.g., #777 on dark backgrounds) for better accessibility.
+
+## 2026-06-20 - [Semantic Hierarchy & Brand Consistency]
+**Learning:** Using a single `<h1>` per page for the primary content title and converting the site brand in the header to a `<p class="site-title">` with a link to the homepage creates a clear, logical document hierarchy for screen readers and search engines while maintaining a consistent visual identity. Adding `aria-labelledby` to sections further enhances landmark navigation.
+**Action:** Promote primary content headings to `<h1>`, use named landmarks for sections, and ensure the site header brand is a home link with consistent styling across all pages.
+
+## 2026-06-25 - [Modern Typography & Synchronized Interactions]
+**Learning:** Modern CSS properties like `text-wrap: balance` (for headings) and `text-wrap: pretty` (for body text) provide high-impact typographic polish with minimal effort. Additionally, using `:focus-within` on containers (like `<section>`) ensures keyboard users receive the same interactive "delight" (like lift effects) as mouse users.
+**Action:** Default to modern text-wrap properties for improved readability and use `:focus-within` to unify the experience between mouse and keyboard users.

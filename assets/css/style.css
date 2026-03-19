@@ -1,5 +1,10 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    scrollbar-gutter: stable;
+    /* Standard properties for cross-browser support */
+    scrollbar-width: thin;
+    scrollbar-color: #777 #1a1a1a;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,6 +44,7 @@ body {
     background-color: #0f0f0f;
     color: #f0f0f0;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 header, footer {
@@ -47,10 +53,28 @@ header, footer {
     text-align: center;
 }
 
-header h1 {
+.site-title {
     margin: 0;
     font-size: 2rem;
+    font-weight: bold;
     color: #0af;
+    text-wrap: balance;
+}
+
+.site-title a {
+    color: #0af;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.site-title a:hover {
+    color: #1ee;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.site-title a:active {
+    transform: translateY(0);
 }
 
 /* Skip link - hidden until focused */
@@ -76,6 +100,7 @@ header h1 {
 a {
     color: #0af;
     text-decoration: none;
+    text-underline-offset: 4px;
     transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -134,6 +159,10 @@ nav a[aria-current="page"] {
     outline-offset: 2px;
 }
 
+main:focus {
+    outline: none;
+}
+
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -151,6 +180,14 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     /* Palette: Subtle entrance animation */
     animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover,
+section:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
 @keyframes fadeIn {
@@ -170,9 +207,18 @@ section {
     }
 }
 
-h2 {
+h2, main h1 {
     color: #0af;
     margin-top: 0;
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+main h1 {
+    font-size: 1.8rem;
 }
 
 footer p {
@@ -181,20 +227,42 @@ footer p {
     color: #aaa;
 }
 
+/* Custom branded scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777; /* Palette: Increased contrast for better accessibility */
+    border: 3px solid #1a1a1a;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0af;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
-    header h1 {
+    .site-title {
         font-size: 1.5rem;
     }
     nav ul {
         flex-direction: column;
     }
     nav li {
-        margin: 0.3rem 0;
+        border-bottom: 1px solid #333;
+    }
+    nav li:last-child {
+        border-bottom: none;
     }
     nav a {
         display: block;
-        padding: 0.6rem 1rem;
+        padding: 0.8rem 1rem;
     }
     main {
         margin: 1rem;
