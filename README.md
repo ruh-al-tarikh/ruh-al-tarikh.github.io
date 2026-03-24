@@ -30,17 +30,19 @@
 
 ## 🏗️ Repository Structure
 
-<div align="left">
+| Folder / File | Type | Description |
+|---------------|------|-------------|
+| 📂 ruh-al-tarikh.github.io | Root | Repository root folder |
+| 🏠 index.html | File | Home page |
+| ℹ️ about.html | File | About the project |
+| 📁 assets/ | Folder | Images, CSS, JS |
+| &nbsp;&nbsp;🖼️ images/ | Folder | Image files |
+| &nbsp;&nbsp;🎨 css/ | Folder | Stylesheets |
+| &nbsp;&nbsp;⚡ js/ | Folder | JavaScript files |
+| ⚙️ _config.yml | File | GitHub Pages configuration |
+| 📄 README.md | File | This file |
 
-📂 **ruh-al-tarikh.github.io/**  
-├─ 🏠 **index.html** &nbsp;&nbsp;_Home page_  
-├─ ℹ️ **about.html** &nbsp;&nbsp;_About the project_  
-├─ 📁 **assets/** &nbsp;&nbsp;_Images, CSS, JS_  
-│   ├─ 🖼️ **images/**  
-│   ├─ 🎨 **css/**  
-│   └─ ⚡ **js/**  
-├─ ⚙️ **_config.yml** &nbsp;&nbsp;_GitHub Pages configuration_  
-└─ 📄 **README.md** &nbsp;&nbsp;_This file_
+---
 
 </div>
 
