@@ -14,7 +14,7 @@
 
 > A creative space where **history meets AI** to deliver meaningful, insightful, and curated content for curious minds.
 
-<div align="center">
+<div>
 
 | Feature | Description | Icon |
 |---------|-------------|------|
@@ -35,10 +35,10 @@
 | 📂 ruh-al-tarikh.github.io | Root | Repository root folder |
 | 🏠 index.html | File | Home page |
 | ℹ️ about.html | File | About the project |
-| 📁 assets/ | Folder | Images, CSS, JS |
-| 🖼️ images/ | Folder | Image files |
-| 🎨 css/ | Folder | Stylesheets |
-| ⚡ js/ | Folder | JavaScript files |
+| 📁 assets | Folder | Images, CSS, JS |
+| 🖼️ images | Folder | Image files |
+| 🎨 css | Folder | Stylesheets |
+| ⚡ js | Folder | JavaScript files |
 | ⚙️ _config.yml | File | GitHub Pages configuration |
 | 📄 README.md | File | This file |
 
@@ -50,7 +50,7 @@
 
 ## 🚀 How to Contribute
 
-<div align="center">
+<div>
 
 | Step | Action | Icon |
 |------|--------|------|
