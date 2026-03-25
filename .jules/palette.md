@@ -49,3 +49,7 @@
 ## 2026-06-25 - [Modern Typography & Synchronized Interactions]
 **Learning:** Modern CSS properties like `text-wrap: balance` (for headings) and `text-wrap: pretty` (for body text) provide high-impact typographic polish with minimal effort. Additionally, using `:focus-within` on containers (like `<section>`) ensures keyboard users receive the same interactive "delight" (like lift effects) as mouse users.
 **Action:** Default to modern text-wrap properties for improved readability and use `:focus-within` to unify the experience between mouse and keyboard users.
+
+## 2026-05-20 - Repository Configuration and Structural Cleanup
+**Learning:** Found that multiple copies of the same structural elements (<header>, <nav>, <main>) in HTML files can lead to accessibility and maintenance issues.
+**Action:** Standardized the repository by removing redundant configurations (CircleCI), fixing dead references (LICENSE), and consolidating HTML files into a single, semantic, and accessible structure with proper skip links and ARIA attributes.
