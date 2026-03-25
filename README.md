@@ -4,7 +4,6 @@
 
 [![Live Site](https://img.shields.io/badge/🌐-Visit%20Site-blue?style=flat-square)](https://ruh-al-tarikh.github.io)
 [![Issues](https://img.shields.io/github/issues/ruh-al-tarikh/ruh-al-tarikh.github.io?style=flat-square&color=red)](https://github.com/ruh-al-tarikh/ruh-al-tarikh.github.io/issues)
-[![License](https://img.shields.io/github/license/ruh-al-tarikh/ruh-al-tarikh.github.io?style=flat-square&color=green)](LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/ruh-al-tarikh/ruh-al-tarikh.github.io?style=flat-square&color=yellow)](https://github.com/ruh-al-tarikh/ruh-al-tarikh.github.io)
 [![AI Enhanced](https://img.shields.io/badge/🤖-AI%20Enhanced-orange?style=flat-square)](https://github.com/ruh-al-tarikh/ruh-al-tarikh.github.io)
 
